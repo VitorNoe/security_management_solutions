@@ -1,14 +1,18 @@
 # Security Management Solutions
 
-Welcome to the Security Management Solutions repository. This project aims to provide an innovative digital solution for real-time monitoring of security devices, such as surveillance cameras and sensors, for security management companies.
+A project designed to improve **Internet account security** by identifying whether the person accessing the account is the authorized user or an intruder. This solution helps prevent hackers and invasions of personal accounts by detecting suspicious activity and enhancing user privacy.
 
-Bem-vindo ao repositório Security Management Solutions. Este projeto visa oferecer uma solução digital inovadora para monitoramento em tempo real de dispositivos de segurança, como câmeras de vigilância e sensores, para empresas do segmento de gerenciamento de segurança.
+## Features
+- Identification of suspicious activity and unauthorized access.
+- Alerts for users about unusual behavior.
+- Real-time account security analysis.
+- Recommendations to improve account security.
 
----
+## Documentation
+- [Documentação em Português](./docs/README.pt-br.md)
+- [Documentation in English](./docs/README.en.md)
 
-## Choose your language | Escolha seu idioma
-
-- [Documentation in English](docs/README.en.md)
-- [Documentação em Português](docs/README.pt-br.md)
-  
----
+## How to Run the Project
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your_user/security_management_solutions.git
