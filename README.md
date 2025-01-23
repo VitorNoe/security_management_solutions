@@ -8,7 +8,7 @@ Bem-vindo ao repositório Security Management Solutions. Este projeto visa ofere
 
 ## Choose your language | Escolha seu idioma
 
-- [Documentation in English](README.en.md)
-- [Documentação em Português](README.pt-br.md)
+- [Documentation in English](docs/README.en.md)
+- [Documentação em Português](docs/README.pt-br.md)
   
 ---
