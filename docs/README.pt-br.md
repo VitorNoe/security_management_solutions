@@ -1,61 +1,15 @@
-# Documentação em Português
+# Soluções de Gerenciamento de Segurança
 
-## Visão Geral
+## Visão Geral do Projeto
+O projeto **Soluções de Gerenciamento de Segurança** é uma solução digital projetada para melhorar a segurança de contas de usuários na internet. O sistema analisa se a sua conta está segura ou se há vulnerabilidades, como acessos não autorizados, contas clonadas ou atividades de hackers.
 
-### Problema
-Empresas de gerenciamento de segurança enfrentam desafios para monitorar a integridade de dispositivos de segurança distribuídos em tempo real. Isso pode causar atrasos na identificação de falhas ou incidentes.
+O objetivo principal é monitorar o comportamento de acesso à conta e detectar se ela está sendo utilizada por indivíduos não autorizados. Este projeto visa ajudar os usuários a garantir sua segurança online com uma ferramenta amigável e eficaz.
 
-### Solução
-Desenvolvemos um painel de monitoramento baseado na web que:
-- Integra dispositivos de segurança via API.
-- Exibe status operacional e alertas de falhas.
-- Envia notificações automáticas por e-mail ou SMS.
-- Centraliza o log de eventos para auditoria.
+---
 
 ## Funcionalidades
-- Monitoramento em tempo real
-- Notificações automatizadas
-- Interface intuitiva e responsiva
-- Gráficos dinâmicos
-
-## Tecnologias
-- Frontend: HTML, CSS, JavaScript
-- Backend: Node.js
-- Banco de Dados: MySQL
-- API: REST
-
-## Como Executar
-
-### Requisitos
-- Node.js instalado
-- MySQL configurado
-- Navegador moderno
-
-### Passos
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seuusuario/security-management-solutions.git
-   ```
-
-2. Instale as dependências:
-   ```bash
-   npm install
-   ```
-
-3. Configure o banco de dados:
-   - Importe o arquivo `database.sql` para seu MySQL.
-   - Atualize as credenciais no arquivo `.env`.
-
-4. Inicie o servidor:
-   ```bash
-   npm start
-   ```
-
-5. Acesse a aplicação no navegador:
-   - URL: `http://localhost:3000`
-
-## Contribuições
-Contribuições são bem-vindas! Siga o guia de contribuição no arquivo `CONTRIBUTING.md`.
-
-## Licença
-Este projeto está licenciado sob a Licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
+- **Análise de Segurança da Conta**: Verifique acessos não autorizados ou atividades suspeitas.
+- **Monitoramento de Acessos**: Registra o tempo, localização e endereço IP do uso da conta.
+- **Detecção de Vulnerabilidades**: Identifica possíveis riscos de segurança, como senhas fracas ou credenciais comprometidas.
+- **Interface Amigável**: Projetada para ser intuitiva e fácil de usar.
+- **Recomendações de Ação**: Fornece um relatório detalhado com passos para melhorar a segurança da conta.
