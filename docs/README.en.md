@@ -1,61 +1,15 @@
-# Documentation in English
+# Security Management Solutions
 
-## Overview
+## Project Overview
+The **Security Management Solutions** project is a digital solution designed to enhance the security of user accounts on the internet. The system analyzes whether your account is safe or if there are vulnerabilities, such as unauthorized access, cloned accounts, or hacker activity. 
 
-### Problem
-Security management companies face challenges in real-time monitoring of distributed security devices. This can result in delays in identifying failures or incidents.
+The primary goal is to monitor account access behavior and detect if it is being used by unauthorized individuals. This project aims to help users ensure their online safety with a user-friendly and effective tool.
 
-### Solution
-We developed a web-based monitoring dashboard that:
-- Integrates security devices via API.
-- Displays operational status and failure alerts.
-- Sends automatic notifications via email or SMS.
-- Centralizes event logs for auditing.
+---
 
 ## Features
-- Real-time monitoring
-- Automated notifications
-- Intuitive and responsive interface
-- Dynamic charts
-
-## Technologies
-- Frontend: HTML, CSS, JavaScript
-- Backend: Node.js
-- Database: MySQL
-- API: REST
-
-## How to Run
-
-### Requirements
-- Installed Node.js
-- Configured MySQL
-- Modern browser
-
-### Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/youruser/security-management-solutions.git
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Configure the database:
-   - Import the `database.sql` file into your MySQL.
-   - Update credentials in the `.env` file.
-
-4. Start the server:
-   ```bash
-   npm start
-   ```
-
-5. Access the application in the browser:
-   - URL: `http://localhost:3000`
-
-## Contributions
-Contributions are welcome! Follow the contribution guide in the `CONTRIBUTING.md` file.
-
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+- **Account Safety Analysis**: Check for unauthorized access or suspicious activity.
+- **Access Monitoring**: Logs the time, location, and IP address of account usage.
+- **Vulnerability Detection**: Detects potential security risks like weak passwords or compromised credentials.
+- **User-Friendly Interface**: Designed to be intuitive and easy to use.
+- **Actionable Recommendations**: Provides a detailed report with steps to improve account security.
