@@ -1,1 +1,5 @@
-
+flask             # Para criar o backend (API e lógica)
+flask-sqlalchemy  # ORM para banco de dados SQLite
+flask-cors        # Para lidar com permissões de CORS no frontend
+requests          # Para consumir APIs externas, se necessário
+pytest            # Para testes automatizados
