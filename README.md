@@ -7,5 +7,5 @@ Security Management Solutions is a digital tool designed to ensure the safety of
 Security Management Solutions é uma ferramenta digital projetada para garantir a segurança de suas contas online. Este projeto foca na identificação de possíveis vulnerabilidades, como invasões de contas, clones e tentativas de acesso não autorizado. Com esta solução, os usuários podem monitorar os horários de acesso às contas e detectar se há usuários não autorizados acessando-as. O objetivo principal é proteger os dados pessoais e garantir a integridade das contas.
 
 ## Documentation
-- [English Documentation](README.en.md)
-- [Documentação em Português](README.pt-br.md)
+- [English Documentation](docs/README.en.md)
+- [Documentação em Português](docs/README.pt-br.md)
