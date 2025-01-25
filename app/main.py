@@ -3,6 +3,9 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 import os
 
+# Importar os modelos
+from app.db.models import db, User, LoginAttempt, SuspiciousActivity, AccessLog
+
 # Inicialização do app
 app = Flask(__name__)
 CORS(app)
@@ -12,15 +15,13 @@ BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{os.path.join(BASE_DIR, 'db/database.sqlite')}"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-# Inicializando o banco de dados
-db = SQLAlchemy(app)
+# Inicializar banco de dados com o app Flask
+db.init_app(app)
 
-# Modelo básico para usuários (será aprimorado depois)
-class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(50), nullable=False, unique=True)
-    email = db.Column(db.String(100), nullable=False, unique=True)
-    last_access = db.Column(db.DateTime, nullable=True)
+# Criar banco de dados automaticamente na primeira execução
+@app.before_first_request
+def create_tables():
+    db.create_all()
 
 # Rota principal
 @app.route('/')
@@ -48,11 +49,6 @@ def check_account():
         }), 200
     else:
         return jsonify({"message": f"Account {username} not found."}), 404
-
-# Criar banco de dados (apenas para dev)
-@app.before_first_request
-def create_tables():
-    db.create_all()
 
 # Inicializando o servidor
 if __name__ == '__main__':
