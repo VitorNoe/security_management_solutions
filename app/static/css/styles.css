@@ -6,3 +6,7 @@ body {
     font-weight: bold;
     font-size: 1.5rem;
 }
+.invalid-feedback {
+    font-size: 0.875rem;
+    color: #dc3545;
+}
