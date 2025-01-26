@@ -1,1 +1,12 @@
+{% extends 'base.html' %}
 
+{% block content %}
+<h2 class="text-center">Check Your Account</h2>
+<form action="/api/check_account" method="POST" class="mt-4">
+    <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Check Security</button>
+</form>
+{% endblock %}
