@@ -1,29 +1,23 @@
-// Function to check vulnerability
+// Função para verificar vulnerabilidade via API do HIBP
 async function checkVulnerability(email) {
+  const resultDiv = document.getElementById('result');
+  resultDiv.innerHTML = 'Checking...';
+
   try {
-    // Load the simulated database
-    const response = await fetch('data.json');
+    const response = await fetch(`http://localhost:3000/check-email?email=${encodeURIComponent(email)}`);
     const data = await response.json();
 
-    // Search for the email in the database
-    const account = data.find((item) => item.email === email);
-
-    // Show results
-    const resultDiv = document.getElementById('result');
-    if (account) {
-      if (account.status === 'compromised') {
-        resultDiv.innerHTML = `<p style="color: red;">⚠️ Your account is compromised!</p>
-                               <p>${account.details}</p>`;
-      } else if (account.status === 'safe') {
-        resultDiv.innerHTML = `<p style="color: green;">✅ Your account is secure!</p>
-                               <p>${account.details}</p>`;
-      }
+    if (data.breaches && data.breaches.length > 0) {
+      resultDiv.innerHTML = `<p style="color: red;">⚠️ Your account is compromised!</p>`;
+      data.breaches.forEach((breach) => {
+        resultDiv.innerHTML += `<p><strong>${breach.Name}</strong>: ${breach.Description}</p>`;
+      });
     } else {
-      resultDiv.innerHTML = `<p style="color: orange;">❓ Account not found in the database. It might be safe, but we recommend vigilance.</p>`;
+      resultDiv.innerHTML = `<p style="color: green;">✅ Your account is secure!</p>`;
     }
   } catch (error) {
-    console.error('Error loading data:', error);
-    document.getElementById('result').innerHTML = `<p style="color: red;">Error checking your account. Please try again later.</p>`;
+    resultDiv.innerHTML = `<p style="color: red;">Error checking your account. Please try again later.</p>`;
+    console.error(error);
   }
 }
 
