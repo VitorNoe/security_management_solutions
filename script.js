@@ -1,29 +1,35 @@
-document.getElementById('security-form').addEventListener('submit', function (event) {
-    event.preventDefault();
+// Function to check vulnerability
+async function checkVulnerability(email) {
+  try {
+    // Load the simulated database
+    const response = await fetch('data.json');
+    const data = await response.json();
 
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+    // Search for the email in the database
+    const account = data.find((item) => item.email === email);
 
-    if (!email || !password) {
-        alert("Please fill in all fields!");
-        return;
-    }
-
-    checkAccountSecurity(email, password);
-});
-
-function checkAccountSecurity(email, password) {
-    // Simulação de análise de segurança
-    const fakeData = [
-        { email: "hacked@example.com", isSecure: false, message: "Your account has been hacked!" },
-        { email: "safe@example.com", isSecure: true, message: "Your account is secure!" }
-    ];
-
-    const account = fakeData.find(data => data.email === email);
-
+    // Show results
+    const resultDiv = document.getElementById('result');
     if (account) {
-        alert(account.message);
+      if (account.status === 'compromised') {
+        resultDiv.innerHTML = `<p style="color: red;">⚠️ Your account is compromised!</p>
+                               <p>${account.details}</p>`;
+      } else if (account.status === 'safe') {
+        resultDiv.innerHTML = `<p style="color: green;">✅ Your account is secure!</p>
+                               <p>${account.details}</p>`;
+      }
     } else {
-        alert("Unable to verify your account. Please try another email.");
+      resultDiv.innerHTML = `<p style="color: orange;">❓ Account not found in the database. It might be safe, but we recommend vigilance.</p>`;
     }
+  } catch (error) {
+    console.error('Error loading data:', error);
+    document.getElementById('result').innerHTML = `<p style="color: red;">Error checking your account. Please try again later.</p>`;
+  }
 }
+
+// Event listener for form submission
+document.getElementById('checkForm').addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent form reload
+  const email = document.getElementById('emailInput').value.trim();
+  checkVulnerability(email);
+});
