@@ -5,33 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Account Security Checker</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>🔐 <span class="gradient-text">Account Security Checker</span></h1>
-      <p>Analyze your account and ensure it's safe!</p>
+      <h1>🌐 Account Security Checker</h1>
+      <p>Check if your account is safe from vulnerabilities.</p>
     </header>
-    
     <main>
-      <form id="checkForm">
-        <label for="emailInput">Enter your email:</label>
-        <input type="email" id="emailInput" placeholder="example@domain.com" required>
-        <button type="submit">Analyze Now</button>
+      <form id="security-form">
+        <label for="account-email">Enter your account email:</label>
+        <input type="email" id="account-email" placeholder="example@email.com" required>
+        <button type="submit">Check Security</button>
       </form>
-      
-      <div id="result" class="result">
-        <!-- Results will appear here -->
-      </div>
+      <div id="results"></div>
     </main>
-    
     <footer>
-      <p>Stay Secure. Stay Alert. &copy; 2025</p>
+      <p>Secure your online presence with confidence. 💻</p>
     </footer>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
