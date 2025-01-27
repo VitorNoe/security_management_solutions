@@ -3,19 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Account Vulnerability Checker</title>
+  <title>Account Security Checker</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <h1>Account Vulnerability Checker</h1>
-    <p>Enter your email below to check if it's vulnerable:</p>
-    <form id="checkForm">
-      <input type="email" id="emailInput" placeholder="Enter your email" required>
-      <button type="submit">Check</button>
-    </form>
-    <div id="result"></div>
+    <header>
+      <h1>🔒 Account Security Checker</h1>
+      <p>Ensure your account is safe from breaches and vulnerabilities.</p>
+    </header>
+    
+    <main>
+      <form id="checkForm">
+        <label for="emailInput">Enter your email:</label>
+        <input type="email" id="emailInput" placeholder="yourname@example.com" required>
+        <button type="submit">Check Now</button>
+      </form>
+      
+      <div id="result" class="result">
+        <!-- Results will appear here -->
+      </div>
+    </main>
+    
+    <footer>
+      <p>&copy; 2025 Account Security Solutions. All rights reserved.</p>
+    </footer>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
