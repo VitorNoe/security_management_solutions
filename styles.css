@@ -1,49 +1,104 @@
+/* Global Styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  font-family: 'Inter', sans-serif;
   margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #4a90e2, #7f8fa6);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  background: #2f3640;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
   text-align: center;
-  width: 300px;
 }
 
-h1 {
-  font-size: 1.5em;
+/* Header */
+header h1 {
+  font-size: 2rem;
   margin-bottom: 10px;
 }
 
-input {
-  width: 90%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+header p {
+  font-size: 1rem;
+  color: #dcdde1;
 }
 
-button {
-  background: #007bff;
+/* Form */
+form {
+  margin-top: 20px;
+}
+
+form label {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  display: block;
+  text-align: left;
+  color: #f5f6fa;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background: #e84118;
   color: #fff;
   border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #0056b3;
-}
-
-#result {
-  margin-top: 20px;
+  border-radius: 8px;
+  font-size: 1rem;
   font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #c23616;
+}
+
+/* Result */
+.result {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.result p {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.result .safe {
+  background: #4cd137;
+}
+
+.result .compromised {
+  background: #e84118;
+}
+
+.result .error {
+  background: #fbc531;
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #dcdde1;
 }
