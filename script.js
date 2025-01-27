@@ -1,30 +1,18 @@
-// Function to simulate a security check
-async function checkVulnerability(email) {
-  const resultDiv = document.getElementById('result');
-  resultDiv.innerHTML = '<p>🔍 Checking account security...</p>';
-
-  // Simulated delay for API response
-  await new Promise(resolve => setTimeout(resolve, 1500));
-
-  // Simulated result
-  const isCompromised = Math.random() > 0.5;
-
-  if (isCompromised) {
-    resultDiv.innerHTML = `
-      <p class="compromised">⚠️ Your account is compromised!</p>
-      <p>We recommend changing your password and enabling Two-Factor Authentication (2FA).</p>
-    `;
-  } else {
-    resultDiv.innerHTML = `
-      <p class="safe">✅ Your account is safe!</p>
-      <p>Keep using strong passwords and stay vigilant.</p>
-    `;
-  }
-}
-
-// Event listener for form submission
-document.getElementById('checkForm').addEventListener('submit', (event) => {
+// Simulating API call for security check
+document.getElementById("security-form").addEventListener("submit", function (event) {
   event.preventDefault();
-  const email = document.getElementById('emailInput').value.trim();
-  checkVulnerability(email);
+  const email = document.getElementById("account-email").value;
+  const resultsDiv = document.getElementById("results");
+
+  // Reset results area
+  resultsDiv.innerHTML = "Checking security...";
+
+  // Simulate a delay for API processing
+  setTimeout(() => {
+    if (email.includes("test")) {
+      resultsDiv.innerHTML = `<span style="color: red;">⚠️ Warning: Your account may be vulnerable!</span>`;
+    } else {
+      resultsDiv.innerHTML = `<span style="color: lightgreen;">✅ Great! Your account appears secure.</span>`;
+    }
+  }, 1500);
 });
