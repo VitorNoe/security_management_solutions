@@ -1,0 +1,17 @@
+[
+  {
+    "email": "hacked_user1@example.com",
+    "status": "compromised",
+    "details": "Found in multiple data breaches, including password leaks."
+  },
+  {
+    "email": "hacked_user2@example.com",
+    "status": "compromised",
+    "details": "Detected in a phishing attack database."
+  },
+  {
+    "email": "safe_user@example.com",
+    "status": "safe",
+    "details": "No vulnerabilities detected."
+  }
+]
