@@ -1,5 +1,0 @@
-[
-    { "email": "hacked@example.com", "isSecure": false, "message": "Your account has been hacked!" },
-    { "email": "safe@example.com", "isSecure": true, "message": "Your account is secure!" },
-    { "email": "unknown@example.com", "isSecure": false, "message": "Your account is at risk!" }
-]
